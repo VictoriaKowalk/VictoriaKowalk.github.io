@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Victoria Kowalk — Portfolio</title>
+  <meta name="description" content="Portfolio de Victoria Kowalk — Full-Stack Developer en formación (C#, Java, PHP, MySQL, HTML, CSS). Integraciones con APIs, proyectos reales." />
+  <meta name="theme-color" content="#0b1220" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Background decor -->
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-grid"></div>
+
+  <!-- Top bar -->
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <a class="brand" href="#top" aria-label="Ir al inicio">
+        <span class="brand__dot"></span>
+        <span class="brand__text">Victoria Kowalk</span>
+      </a>
+
+      <nav class="nav">
+        <a href="#about">Sobre mí</a>
+        <a href="#stack">Stack</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#contact">Contacto</a>
+      </nav>
+
+      <div class="actions">
+        <a class="btn btn--ghost" href="https://github.com/VictoriaKowalk" target="_blank" rel="noreferrer">GitHub</a>
+        <button class="btn btn--primary" id="copyEmailBtn" type="button" title="Copiar email">Copiar email</button>
+      </div>
+
+      <button class="burger" id="burgerBtn" type="button" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile" id="mobileMenu" aria-hidden="true">
+      <div class="wrap mobile__inner">
+        <a href="#about">Sobre mí</a>
+        <a href="#stack">Stack</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#contact">Contacto</a>
+        <div class="mobile__actions">
+          <a class="btn btn--ghost" href="https://github.com/VictoriaKowalk" target="_blank" rel="noreferrer">GitHub</a>
+          <button class="btn btn--primary" id="copyEmailBtn2" type="button">Copiar email</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="top" class="wrap">
+    <section class="hero">
+      <div class="hero__left">
+        <p class="pill">
+          <span class="pill__spark"></span>
+          Full-Stack Developer en formación · Web & Software
+        </p>
+
+        <h1 class="hero__title">
+          Construyo soluciones reales con código.
+        </h1>
+
+        <p class="hero__subtitle">
+          C#, Java, PHP, MySQL, HTML y CSS. Me enfoco en proyectos con lógica backend, integraciones con APIs y productos listos para usar.
+        </p>
+
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#projects">Ver proyectos</a>
+          <a class="btn btn--ghost" href="#contact">Contacto</a>
+        </div>
+
+        <div class="hero__highlights">
+          <div class="kpi">
+            <p class="kpi__label">Foco</p>
+            <p class="kpi__value">Full-Stack</p>
+          </div>
+          <div class="kpi">
+            <p class="kpi__label">Interés</p>
+            <p class="kpi__value">APIs + DB</p>
+          </div>
+          <div class="kpi">
+            <p class="kpi__label">Stack</p>
+            <p class="kpi__value">Web + Software</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__right">
+        <div class="card card--hero">
+          <div class="card__header">
+            <span class="status"></span>
+            <span class="mono">status</span>
+            <span class="card__spacer"></span>
+            <span class="badge">Disponible para proyectos</span>
+          </div>
+
+          <div class="terminal" aria-label="Terminal decorativa">
+            <div class="terminal__line"><span class="terminal__prompt">victoria@dev</span>:<span class="terminal__path">~/portfolio</span>$ <span id="typing"></span><span class="cursor"></span></div>
+            <div class="terminal__out" id="terminalOut"></div>
+          </div>
+
+          <div class="mini">
+            <div class="mini__item">
+              <p class="mini__label">UTN</p>
+              <p class="mini__value">TUP</p>
+            </div>
+            <div class="mini__item">
+              <p class="mini__label">Herramientas</p>
+              <p class="mini__value">Postman · Figma</p>
+            </div>
+            <div class="mini__item">
+              <p class="mini__label">DB</p>
+              <p class="mini__value">MySQL</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="section__head">
+        <h2>Sobre mí</h2>
+        <p>Me gusta crear software que resuelva necesidades reales: sistemas, webs, integraciones y automatización.</p>
+      </div>
+
+      <div class="grid grid--2">
+        <article class="card">
+          <h3>Lo que hago</h3>
+          <ul class="list">
+            <li>Desarrollo web (HTML/CSS/PHP) con foco en UX y performance.</li>
+            <li>Software en C# y Java con lógica de negocio clara.</li>
+            <li>Integraciones con APIs REST y trabajo con MySQL.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Cómo trabajo</h3>
+          <ul class="list">
+            <li>Prioridad en código limpio, legible y mantenible.</li>
+            <li>Versionado con Git/GitHub y commits prolijos.</li>
+            <li>Pruebas y validaciones antes de entregar.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Stack -->
+    <section id="stack" class="section">
+      <div class="section__head">
+        <h2>Stack</h2>
+        <p>Tecnologías con las que desarrollo y herramientas que uso para diseñar, testear y versionar.</p>
+      </div>
+
+      <div class="stack">
+        <div class="stack__group">
+          <p class="stack__title">Lenguajes</p>
+          <div class="chips">
+            <span class="chip">C#</span>
+            <span class="chip">Java</span>
+            <span class="chip">PHP</span>
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+          </div>
+        </div>
+
+        <div class="stack__group">
+          <p class="stack__title">Base de datos</p>
+          <div class="chips">
+            <span class="chip">MySQL</span>
+            <span class="chip">JDBC</span>
+          </div>
+        </div>
+
+        <div class="stack__group">
+          <p class="stack__title">Herramientas</p>
+          <div class="chips">
+            <span class="chip">Git</span>
+            <span class="chip">GitHub</span>
+            <span class="chip">Postman</span>
+            <span class="chip">Figma</span>
+            <span class="chip">VS Code</span>
+            <span class="chip">Eclipse</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="section__head">
+        <h2>Proyectos</h2>
+        <p>Selección de trabajos que muestran mi perfil: backend, base de datos, integraciones y web.</p>
+      </div>
+
+      <div class="projects">
+        <!-- Project 1 -->
+        <article class="card project">
+          <div class="project__top">
+            <h3>Web Inmobiliaria + API CRM (TIV)</h3>
+            <div class="project__tags">
+              <span class="tag">API</span>
+              <span class="tag">CRM</span>
+              <span class="tag">Web</span>
+            </div>
+          </div>
+          <p class="muted">
+            Sitio inmobiliario con integración a un CRM inmobiliario (TIV). Consumo de propiedades vía API, render dinámico y lógica de backend.
+          </p>
+          <ul class="bullets">
+            <li>Integración REST para traer listados y detalles.</li>
+            <li>Datos dinámicos y estructura escalable.</li>
+            <li>Orientado a negocio real.</li>
+          </ul>
+
+          <div class="project__actions">
+            <!-- Reemplazá por el repo real cuando lo tengas público -->
+            <a class="btn btn--primary btn--small" href="https://github.com/VictoriaKowalk" target="_blank" rel="noreferrer">Ver repos</a>
+            <a class="btn btn--ghost btn--small" href="#contact">Pedir demo</a>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="card project">
+          <div class="project__top">
+            <h3>Sistema Bancario (Java + MySQL)</h3>
+            <div class="project__tags">
+              <span class="tag">Java</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">JDBC</span>
+            </div>
+          </div>
+          <p class="muted">
+            Gestión de clientes y cuentas, transferencias, validaciones y persistencia en base de datos.
+          </p>
+          <ul class="bullets">
+            <li>DAO + JDBC, transacciones y validaciones.</li>
+            <li>Modelo relacional y consultas.</li>
+            <li>Enfoque en lógica de negocio.</li>
+          </ul>
+
+          <div class="project__actions">
+            <a class="btn btn--primary btn--small" href="https://github.com/VictoriaKowalk" target="_blank" rel="noreferrer">Ver repos</a>
+            <a class="btn btn--ghost btn--small" href="#contact">Contacto</a>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="card project">
+          <div class="project__top">
+            <h3>Apps Desktop (C# / WinForms)</h3>
+            <div class="project__tags">
+              <span class="tag">C#</span>
+              <span class="tag">Desktop</span>
+              <span class="tag">UI</span>
+            </div>
+          </div>
+          <p class="muted">
+            Aplicaciones de escritorio con interfaces y lógica de negocio, enfocadas en usabilidad.
+          </p>
+          <ul class="bullets">
+            <li>Formularios, validaciones y navegación.</li>
+            <li>Estructura clara y mantenible.</li>
+          </ul>
+
+          <div class="project__actions">
+            <a class="btn btn--primary btn--small" href="https://github.com/VictoriaKowalk" target="_blank" rel="noreferrer">Ver repos</a>
+            <a class="btn btn--ghost btn--small" href="#contact">Contacto</a>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="card project">
+          <div class="project__top">
+            <h3>Frontend (HTML + CSS)</h3>
+            <div class="project__tags">
+              <span class="tag">Responsive</span>
+              <span class="tag">UI</span>
+              <span class="tag">Web</span>
+            </div>
+          </div>
+          <p class="muted">
+            Maquetación moderna, responsive y visualmente cuidada para sitios profesionales.
+          </p>
+          <ul class="bullets">
+            <li>Diseño limpio con componentes reutilizables.</li>
+            <li>Buenas prácticas de layout y accesibilidad.</li>
+          </ul>
+
+          <div class="project__actions">
+            <a class="btn btn--primary btn--small" href="https://github.com/VictoriaKowalk" target="_blank" rel="noreferrer">Ver repos</a>
+            <a class="btn btn--ghost btn--small" href="#contact">Contacto</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section section--contact">
+      <div class="section__head">
+        <h2>Contacto</h2>
+        <p>¿Querés que trabajemos juntas? Te dejo acceso directo.</p>
+      </div>
+
+      <div class="grid grid--2">
+        <div class="card">
+          <h3>Links</h3>
+          <div class="links">
+            <a class="link" href="https://github.com/VictoriaKowalk" target="_blank" rel="noreferrer">GitHub ↗</a>
+            <a class="link" href="#" target="_blank" rel="noreferrer">LinkedIn ↗ <span class="muted">(poné tu link)</span></a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Email</h3>
+          <p class="muted">Reemplazá el mail en <code>app.js</code> y listo.</p>
+          <div class="emailbox">
+            <code id="emailText">tuemail@email.com</code>
+            <button class="btn btn--primary btn--small" id="copyEmailBtn3" type="button">Copiar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Victoria Kowalk · Hecho con ❤️ y café</p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
