@@ -43,26 +43,6 @@ Git · GitHub · Figma · Postman · VS Code
 
 ---
 
-## 📂 Proyectos Destacados
-
-### 🏢 Virginia Maffia Propiedades  
-Portal inmobiliario con integración API (TIV) para sincronización automática de propiedades.  
-🔗 https://vmaffiapropiedades.com.ar/
-
----
-
-### 🕯 Avelino · Tienda Online  
-E-commerce premium para marca de velas.  
-🔗 https://www.avelinotienda.com.ar/
-
----
-
-### 🍕 Banchero USA  
-Sitio institucional con foco en credibilidad y conversión.  
-🔗 https://www.bancherousa.com
-
----
-
 # 🎯 Open to Work
 
 Estoy abierta a oportunidades como:
