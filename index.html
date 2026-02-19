@@ -1,344 +1,343 @@
 <!doctype html>
 <html lang="es">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Victoria Kowalk — Portfolio</title>
-  <meta name="description" content="Portfolio de Victoria Kowalk — Full-Stack Developer en formación (C#, Java, PHP, MySQL, HTML, CSS). Integraciones con APIs, proyectos reales." />
-  <meta name="theme-color" content="#0b1220" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Victoria Kowalk · Portfolio</title>
+    <meta name="description" content="Portfolio de Victoria Kowalk · Full-Stack Web Developer" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
-  <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <!-- Background decor -->
-  <div class="bg-orb orb-1"></div>
-  <div class="bg-orb orb-2"></div>
-  <div class="bg-grid"></div>
+    <!-- NAV -->
+    <header class="nav-wrap">
+        <nav class="nav container">
+            <a class="brand" href="#home" aria-label="Ir al inicio">
+                <span class="brand-dot" aria-hidden="true"></span>
+                <span class="brand-text">Victoria<span class="brand-accent">Kowalk</span></span>
+            </a>
 
-  <!-- Top bar -->
-  <header class="topbar">
-    <div class="wrap topbar__inner">
-      <a class="brand" href="#top" aria-label="Ir al inicio">
-        <span class="brand__dot"></span>
-        <span class="brand__text">Victoria Kowalk</span>
-      </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
 
-      <nav class="nav">
-        <a href="#about">Sobre mí</a>
-        <a href="#stack">Stack</a>
-        <a href="#projects">Proyectos</a>
-        <a href="#contact">Contacto</a>
-      </nav>
-
-      <div class="actions">
-        <a class="btn btn--ghost" href="https://github.com/VictoriaKowalk" target="_blank" rel="noreferrer">GitHub</a>
-        <button class="btn btn--primary" id="copyEmailBtn" type="button" title="Copiar email">Copiar email</button>
-      </div>
-
-      <button class="burger" id="burgerBtn" type="button" aria-label="Abrir menú">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-
-    <div class="mobile" id="mobileMenu" aria-hidden="true">
-      <div class="wrap mobile__inner">
-        <a href="#about">Sobre mí</a>
-        <a href="#stack">Stack</a>
-        <a href="#projects">Proyectos</a>
-        <a href="#contact">Contacto</a>
-        <div class="mobile__actions">
-          <a class="btn btn--ghost" href="https://github.com/VictoriaKowalk" target="_blank" rel="noreferrer">GitHub</a>
-          <button class="btn btn--primary" id="copyEmailBtn2" type="button">Copiar email</button>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <main id="top" class="wrap">
-    <section class="hero">
-      <div class="hero__left">
-        <p class="pill">
-          <span class="pill__spark"></span>
-          Full-Stack Developer en formación · Web & Software
-        </p>
-
-        <h1 class="hero__title">
-          Construyo soluciones reales con código.
-        </h1>
-
-        <p class="hero__subtitle">
-          C#, Java, PHP, MySQL, HTML y CSS. Me enfoco en proyectos con lógica backend, integraciones con APIs y productos listos para usar.
-        </p>
-
-        <div class="hero__cta">
-          <a class="btn btn--primary" href="#projects">Ver proyectos</a>
-          <a class="btn btn--ghost" href="#contact">Contacto</a>
-        </div>
-
-        <div class="hero__highlights">
-          <div class="kpi">
-            <p class="kpi__label">Foco</p>
-            <p class="kpi__value">Full-Stack</p>
-          </div>
-          <div class="kpi">
-            <p class="kpi__label">Interés</p>
-            <p class="kpi__value">APIs + DB</p>
-          </div>
-          <div class="kpi">
-            <p class="kpi__label">Stack</p>
-            <p class="kpi__value">Web + Software</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero__right">
-        <div class="card card--hero">
-          <div class="card__header">
-            <span class="status"></span>
-            <span class="mono">status</span>
-            <span class="card__spacer"></span>
-            <span class="badge">Disponible para proyectos</span>
-          </div>
-
-          <div class="terminal" aria-label="Terminal decorativa">
-            <div class="terminal__line"><span class="terminal__prompt">victoria@dev</span>:<span class="terminal__path">~/portfolio</span>$ <span id="typing"></span><span class="cursor"></span></div>
-            <div class="terminal__out" id="terminalOut"></div>
-          </div>
-
-          <div class="mini">
-            <div class="mini__item">
-              <p class="mini__label">UTN</p>
-              <p class="mini__value">TUP</p>
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#sobre-mi" class="nav-link">Sobre mí</a>
+                <a href="#proyectos" class="nav-link">Proyectos</a>
+                <a href="#contacto" class="nav-link">Contacto</a>
             </div>
-            <div class="mini__item">
-              <p class="mini__label">Herramientas</p>
-              <p class="mini__value">Postman · Figma</p>
+        </nav>
+    </header>
+
+    <!-- HOME -->
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-grid" aria-hidden="true"></div>
+
+            <div class="container hero-inner">
+                <div class="hero-left">
+
+
+                    <h1 class="hero-title">
+                        <span class="t-white">Victoria</span>
+                        <span class="t-green">Kowalk</span>
+                    </h1>
+
+                    <p class="hero-role">Full-Stack Web Developer</p>
+
+                    <p class="hero-subtitle">
+                        Desarrollo soluciones escalables para tu negocio. Enfocada en acompañar a emprendedores y PyMEs
+                        en su transformación digital.
+                    </p>
+
+                    <div class="hero-cta">
+                        <a class="btn btn-primary" href="#proyectos">Ver proyectos</a>
+                        <a class="btn btn-ghost" href="#contacto">Hablemos</a>
+                    </div>
+
+                    <div class="hero-mini">
+                        <div class="mini-card">
+                            <div class="mini-kpi">+API</div>
+                            <div class="mini-text">Integraciones reales</div>
+                        </div>
+                        <div class="mini-card">
+                            <div class="mini-kpi">UX/UI</div>
+                            <div class="mini-text">Diseño prolijo</div>
+                        </div>
+                        <div class="mini-card">
+                            <div class="mini-kpi">MySQL</div>
+                            <div class="mini-text">Datos + performance</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-right">
+                    <div class="hero-card">
+                        <div class="hero-card-top">
+                            <span class="chip">Laravel</span>
+                            <span class="chip">Java</span>
+                            <span class="chip">MySQL</span>
+                            <span class="chip">Tailwind</span>
+                        </div>
+
+                        <div class="hero-visual">
+                            <div class="orb orb-1"></div>
+                            <div class="orb orb-2"></div>
+                            <div class="orb orb-3"></div>
+
+                            <div class="terminal">
+                                <div class="terminal-bar">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                    <span class="terminal-title">deploy.log</span>
+                                </div>
+                                <pre class="terminal-body"><code id="terminalType">
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+$ php artisan schedule:run
+✔ synced properties 
+✔ cache warmed
+✔ response time improved
+
+$ npm run build
+✔ assets compiled
+                </code></pre>
+                            </div>
+                        </div>
+
+                        <p class="hero-note">
+                            Full-stack con foco en productos web modernos, UX/UI y performance.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="mini__item">
-              <p class="mini__label">DB</p>
-              <p class="mini__value">MySQL</p>
+        </section>
+
+        <!-- SOBRE MI -->
+        <section id="sobre-mi" class="section">
+            <div class="container">
+                <div class="section-head">
+                    <h2 class="section-title section-title--hero">
+                        <span class="t-green">Sobre</span> <span class="t-white">mí</span>
+                    </h2>
+                </div>
+
+                <!-- 2 columnas: foto + datos  -->
+                <div class="about about--clean">
+                    <div class="about-photo about-photo--soft">
+                        <img src="me.png" alt="Foto de Victoria Kowalk" loading="lazy">
+                    </div>
+
+                    <div class="about-content about-content--clean">
+                        <br>
+                        <p class="about-text about-text--display">
+                            Soy Victoria Kowalk, Técnica Universitaria en Programacion recibida en la UTN con base en
+                            Buenos Aires.
+                            Desarrollo sitios y sistemas web end-to-end (front y back), integrando APIs, bases de datos
+                            MySQL y diseño orientado a UX/UI.
+                            Me gusta resolver problemas reales, optimizar flujos y entregar productos prolijos, rápidos
+                            y escalables.
+                        </p>
+
+                        <div class="facts">
+                            <br>
+                            <br>
+                            <div class="fact">🎯 <b>Rol:</b> Web Developer</div>
+                            <div class="fact">🌍 <b>Con sede en:</b> Buenos Aires, Argentina</div>
+                            <div class="fact">🔥 <b>Fortalezas:</b> Resolución de problemas · Adaptabilidad</div>
+                            <div class="fact">🚀 <b>Enfoque:</b> Sitios web interactivos y responsivos</div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <!-- TECH STACK-->
+                <div class="stack stack--wide">
+                    <h3 class="subhead subhead--wide">Tech Stack</h3>
+
+                    <div class="stack-grid stack-grid--wide">
+                        <!-- Lenguajes / frameworks -->
+                        <div class="stack-item stack-item--flat"><i
+                                class="devicon-html5-plain colored"></i><span>HTML5</span></div>
+                        <div class="stack-item stack-item--flat"><i
+                                class="devicon-css3-plain colored"></i><span>CSS3</span></div>
+                        <div class="stack-item stack-item--flat"><i
+                                class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+                        <div class="stack-item stack-item--flat"><i
+                                class="devicon-php-plain colored"></i><span>PHP</span></div>
+                        <div class="stack-item stack-item--flat"><i
+                                class="devicon-laravel-original colored"></i><span>Laravel</span></div>
+                        <div class="stack-item stack-item--flat"><i
+                                class="devicon-java-plain colored"></i><span>Java</span></div>
+                        <div class="stack-item stack-item--flat"><i
+                                class="devicon-csharp-plain colored"></i><span>C#</span></div>
+                        <div class="stack-item stack-item--flat"><i
+                                class="devicon-mysql-original colored"></i><span>MySQL</span></div>
+
+                        <!-- Herramientas -->
+                        <div class="stack-item stack-item--flat"><i
+                                class="devicon-git-plain colored"></i><span>Git</span></div>
+                        <div class="stack-item stack-item--flat"><i
+                                class="devicon-github-original"></i><span>GitHub</span></div>
+                        <div class="stack-item stack-item--flat"><i
+                                class="devicon-figma-plain colored"></i><span>Figma</span></div>
+                        <div class="stack-item stack-item--flat"><i
+                                class="devicon-postman-plain colored"></i><span>Postman</span></div>
+                        <div class="stack-item stack-item--flat"><i class="devicon-vscode-plain colored"></i><span>VS
+                                Code</span></div>
+                    </div>
+                </div>
+
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- About -->
-    <section id="about" class="section">
-      <div class="section__head">
-        <h2>Sobre mí</h2>
-        <p>Me gusta crear software que resuelva necesidades reales: sistemas, webs, integraciones y automatización.</p>
-      </div>
 
-      <div class="grid grid--2">
-        <article class="card">
-          <h3>Lo que hago</h3>
-          <ul class="list">
-            <li>Desarrollo web (HTML/CSS/PHP) con foco en UX y performance.</li>
-            <li>Software en C# y Java con lógica de negocio clara.</li>
-            <li>Integraciones con APIs REST y trabajo con MySQL.</li>
-          </ul>
-        </article>
+        <!-- PROYECTOS -->
+        <section id="proyectos" class="section section-alt">
+            <div class="container">
+                <div class="section-head">
+                    <h2 class="section-title section-title--hero">
+                        <span class="t-green">Proyectos</span> <span class="t-white">destacados</span>
+                    </h2>
+                </div>
 
-        <article class="card">
-          <h3>Cómo trabajo</h3>
-          <ul class="list">
-            <li>Prioridad en código limpio, legible y mantenible.</li>
-            <li>Versionado con Git/GitHub y commits prolijos.</li>
-            <li>Pruebas y validaciones antes de entregar.</li>
-          </ul>
-        </article>
-      </div>
-    </section>
+                <div class="projects">
+                    <!-- 1 -->
+                    <article class="project-card">
+                        <div class="project-img">
+                            <img src="maffia.jpg" alt="Virginia Maffia Propiedades" loading="lazy">
+                        </div>
 
-    <!-- Stack -->
-    <section id="stack" class="section">
-      <div class="section__head">
-        <h2>Stack</h2>
-        <p>Tecnologías con las que desarrollo y herramientas que uso para diseñar, testear y versionar.</p>
-      </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Virginia Maffia Propiedades</h3>
+                            <h3 class="project-title">· Web inmobiliaria + CRM </h3>
+                            <p class="project-desc">
+                                Portal inmobiliario con integración API para mantener propiedades sincronizadas y
+                                mejorar el filtrado/UX.
+                            </p>
 
-      <div class="stack">
-        <div class="stack__group">
-          <p class="stack__title">Lenguajes</p>
-          <div class="chips">
-            <span class="chip">C#</span>
-            <span class="chip">Java</span>
-            <span class="chip">PHP</span>
-            <span class="chip">HTML</span>
-            <span class="chip">CSS</span>
-          </div>
-        </div>
+                            <a class="btn btn-primary btn-sm" href="https://vmaffiapropiedades.com.ar/" target="_blank"
+                                rel="noopener">
+                                Ver sitio
+                            </a>
+                        </div>
+                    </article>
 
-        <div class="stack__group">
-          <p class="stack__title">Base de datos</p>
-          <div class="chips">
-            <span class="chip">MySQL</span>
-            <span class="chip">JDBC</span>
-          </div>
-        </div>
+                    <!-- 2 -->
+                    <article class="project-card">
+                        <div class="project-img">
+                            <img src="avelinotienda.jpg" alt="Avelino Tienda Online" loading="lazy">
+                        </div>
 
-        <div class="stack__group">
-          <p class="stack__title">Herramientas</p>
-          <div class="chips">
-            <span class="chip">Git</span>
-            <span class="chip">GitHub</span>
-            <span class="chip">Postman</span>
-            <span class="chip">Figma</span>
-            <span class="chip">VS Code</span>
-            <span class="chip">Eclipse</span>
-          </div>
-        </div>
-      </div>
-    </section>
+                        <div class="project-body">
+                            <h3 class="project-title">Avelino</h3>
+                            <h3 class="project-title">· Tienda online</h3>
+                            <p class="project-desc">
+                                Plataforma de e-commerce premium para marca de velas. Integracion con pasarela de pagos
+                                y panel de administración.
+                            </p>
 
-    <!-- Projects -->
-    <section id="projects" class="section">
-      <div class="section__head">
-        <h2>Proyectos</h2>
-        <p>Selección de trabajos que muestran mi perfil: backend, base de datos, integraciones y web.</p>
-      </div>
+                            <a class="btn btn-primary btn-sm" href="https://www.avelinotienda.com.ar/" target="_blank"
+                                rel="noopener">
+                                Ver sitio
+                            </a>
+                        </div>
+                    </article>
 
-      <div class="projects">
-        <!-- Project 1 -->
-        <article class="card project">
-          <div class="project__top">
-            <h3>Web Inmobiliaria + API CRM (TIV)</h3>
-            <div class="project__tags">
-              <span class="tag">API</span>
-              <span class="tag">CRM</span>
-              <span class="tag">Web</span>
+                    <!-- 3 -->
+                    <article class="project-card">
+                        <div class="project-img">
+                            <img src="banchero.jpg" alt="Banchero USA Sitio comercial" loading="lazy">
+                        </div>
+
+                        <div class="project-body">
+                            <h3 class="project-title">Banchero USA</h3>
+                            <h3 class="project-title">· Web institucional</h3>
+                            <p class="project-desc">
+                                Presencia institucional con foco en credibilidad, jerarquía visual, sucuersales, menú y
+                                CTA. Integración con App de delivery.
+                            </p>
+
+                            <a class="btn btn-primary btn-sm" href="https://www.bancherousa.com" target="_blank"
+                                rel="noopener">
+                                Ver sitio
+                            </a>
+                        </div>
+                    </article>
+                </div>
             </div>
-          </div>
-          <p class="muted">
-            Sitio inmobiliario con integración a un CRM inmobiliario (TIV). Consumo de propiedades vía API, render dinámico y lógica de backend.
-          </p>
-          <ul class="bullets">
-            <li>Integración REST para traer listados y detalles.</li>
-            <li>Datos dinámicos y estructura escalable.</li>
-            <li>Orientado a negocio real.</li>
-          </ul>
+        </section>
 
-          <div class="project__actions">
-            <!-- Reemplazá por el repo real cuando lo tengas público -->
-            <a class="btn btn--primary btn--small" href="https://github.com/VictoriaKowalk" target="_blank" rel="noreferrer">Ver repos</a>
-            <a class="btn btn--ghost btn--small" href="#contact">Pedir demo</a>
-          </div>
-        </article>
+        <!-- CONTACTO -->
+        <section id="contacto" class="section">
+            <div class="container">
+                <div class="section-head">
+                    <h2 class="section-title section-title--hero">
+                        <span class="t-green">Contacto</span>
+                    </h2>
+                    <p class="section-desc">Si querés que trabajemos juntos, escribime. Respondo rápido 🙂</p>
+                </div>
 
-        <!-- Project 2 -->
-        <article class="card project">
-          <div class="project__top">
-            <h3>Sistema Bancario (Java + MySQL)</h3>
-            <div class="project__tags">
-              <span class="tag">Java</span>
-              <span class="tag">MySQL</span>
-              <span class="tag">JDBC</span>
+                <div class="contact">
+                    <div class="contact-card">
+                        <h3 class="subhead">Email</h3>
+                        <p class="muted">Listo para copiar:</p>
+
+                        <div class="copy-row">
+                            <code id="emailText">victoriakowalk@gmail.com</code>
+                            <button class="btn btn-ghost btn-sm" id="copyEmailBtn" type="button">Copiar</button>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3 class="subhead">Redes</h3>
+                        <div class="socials">
+                            <a class="social" href="https://www.linkedin.com/in/victoria-kowalk/" target="_blank"
+                                rel="noopener">
+                                <i class="devicon-linkedin-plain"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a class="social" href="https://github.com/VictoriaKowalk" target="_blank" rel="noopener">
+                                <i class="devicon-github-original"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card contact-highlight">
+                        <h3 class="subhead">¿Armamos algo?</h3>
+                        <p class="muted">
+                            Webs modernas, responsivas e integraciones con APIs y MySQL para procesos reales.
+                        </p>
+                        <a class="btn btn-primary"
+                            href="mailto:victoriakowalk@gmail.com?subject=Hola%20Victoria%20-%20Proyecto%20web">
+                            Escribirme
+                        </a>
+                    </div>
+                </div>
             </div>
-          </div>
-          <p class="muted">
-            Gestión de clientes y cuentas, transferencias, validaciones y persistencia en base de datos.
-          </p>
-          <ul class="bullets">
-            <li>DAO + JDBC, transacciones y validaciones.</li>
-            <li>Modelo relacional y consultas.</li>
-            <li>Enfoque en lógica de negocio.</li>
-          </ul>
+        </section>
+    </main>
 
-          <div class="project__actions">
-            <a class="btn btn--primary btn--small" href="https://github.com/VictoriaKowalk" target="_blank" rel="noreferrer">Ver repos</a>
-            <a class="btn btn--ghost btn--small" href="#contact">Contacto</a>
-          </div>
-        </article>
-
-        <!-- Project 3 -->
-        <article class="card project">
-          <div class="project__top">
-            <h3>Apps Desktop (C# / WinForms)</h3>
-            <div class="project__tags">
-              <span class="tag">C#</span>
-              <span class="tag">Desktop</span>
-              <span class="tag">UI</span>
-            </div>
-          </div>
-          <p class="muted">
-            Aplicaciones de escritorio con interfaces y lógica de negocio, enfocadas en usabilidad.
-          </p>
-          <ul class="bullets">
-            <li>Formularios, validaciones y navegación.</li>
-            <li>Estructura clara y mantenible.</li>
-          </ul>
-
-          <div class="project__actions">
-            <a class="btn btn--primary btn--small" href="https://github.com/VictoriaKowalk" target="_blank" rel="noreferrer">Ver repos</a>
-            <a class="btn btn--ghost btn--small" href="#contact">Contacto</a>
-          </div>
-        </article>
-
-        <!-- Project 4 -->
-        <article class="card project">
-          <div class="project__top">
-            <h3>Frontend (HTML + CSS)</h3>
-            <div class="project__tags">
-              <span class="tag">Responsive</span>
-              <span class="tag">UI</span>
-              <span class="tag">Web</span>
-            </div>
-          </div>
-          <p class="muted">
-            Maquetación moderna, responsive y visualmente cuidada para sitios profesionales.
-          </p>
-          <ul class="bullets">
-            <li>Diseño limpio con componentes reutilizables.</li>
-            <li>Buenas prácticas de layout y accesibilidad.</li>
-          </ul>
-
-          <div class="project__actions">
-            <a class="btn btn--primary btn--small" href="https://github.com/VictoriaKowalk" target="_blank" rel="noreferrer">Ver repos</a>
-            <a class="btn btn--ghost btn--small" href="#contact">Contacto</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section section--contact">
-      <div class="section__head">
-        <h2>Contacto</h2>
-        <p>¿Querés que trabajemos juntas? Te dejo acceso directo.</p>
-      </div>
-
-      <div class="grid grid--2">
-        <div class="card">
-          <h3>Links</h3>
-          <div class="links">
-            <a class="link" href="https://github.com/VictoriaKowalk" target="_blank" rel="noreferrer">GitHub ↗</a>
-            <a class="link" href="#" target="_blank" rel="noreferrer">LinkedIn ↗ <span class="muted">(poné tu link)</span></a>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Email</h3>
-          <p class="muted">Reemplazá el mail en <code>app.js</code> y listo.</p>
-          <div class="emailbox">
-            <code id="emailText">tuemail@email.com</code>
-            <button class="btn btn--primary btn--small" id="copyEmailBtn3" type="button">Copiar</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
+    <!-- FOOTER -->
     <footer class="footer">
-      <p>© <span id="year"></span> Victoria Kowalk · Hecho con ❤️ y café</p>
+        <div class="container footer-inner">
+            <p>© 2026 Victoria Kowalk · Full-Stack Developer</p>
+            <a class="to-top" href="#home" aria-label="Volver arriba">↑</a>
+        </div>
     </footer>
-  </main>
 
-  <script src="app.js"></script>
+    <script src="app.js"></script>
 </body>
+
 </html>
